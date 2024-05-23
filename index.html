@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <div class="splitter">
+    S P L I
+    <br>
+    T T E R
+  </div>
+  <div class="card">
+    <div class="first">
+      <div class="head-group">
+        <div class="head">Bill</div>
+        <div class="error-message" id="bill-error"></div>
+      </div>
+      <div class="field" id="field-bill">
+        <img src="images\icon-dollar.svg" alt="" class="icon">
+        <input class="input" id="input-bill" type="text" placeholder="0"/>
+      </div>
+
+      <div class="head">Select Tip %</div>
+      <div class="tip-container">
+        <div class="tip">5%</div>
+        <div class="tip">10%</div>
+        <div class="tip">15%</div>
+        <div class="tip">25%</div>
+        <div class="tip">50%</div>
+        <div class="custom" id="custom">
+          <input class="input" id="custom-field" type="text" placeholder="Custom"/>
+        </div>
+      </div>
+
+      <div class="head-group">
+        <div class="head">Number of People</div>
+        <div class="error-message" id="people-error"></div>
+      </div>
+      <div class="field" id="field-people">
+        <img src="images\icon-person.svg" alt="" class="icon">
+        <input class="input" id="input-people" type="text" placeholder="0"/>
+      </div>
+
+    </div>
+    <div class="second">
+        <div class="calculated" id="calculated-top">
+          <div class="left">
+            <span>Tip Amount</span>
+            <span>/ person</span>
+          </div>
+          <div class="right">$0.00</div>
+        </div>
+
+        <div class="calculated" id="calculated-bottom">
+          <div class="left">
+            <span>Total</span>
+            <span>/ person</span>
+          </div>
+          <div class="right">$0.00</div>
+        </div>
+        
+        <div class="reset">RESET</div>
+    </div>
+  </div>
+</body>
+</html>

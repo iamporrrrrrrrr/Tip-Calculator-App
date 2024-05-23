@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --hover: hsl(172, 61%, 76%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Space Mono";
+    font-weight: 700;
+    transition: 0.2s;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: var(--Light-grayish-cyan);
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.splitter{
+    margin-bottom: 5rem;
+    font-size: 1.5rem;
+    color: var(--Very-dark-cyan);
+}
+
+.card{
+    display:flex;
+    width: min(90%,1000px);
+    background-color: var(--White);
+    border-radius: 1.5rem;
+}
+
+.first{
+    flex-grow: 1;
+    margin: 2.5rem;
+    width: 50%;
+}
+
+.head-group{
+    display: flex;
+    width: 100%;
+}
+
+.error-message{
+    font-size:1rem;
+    color: red;
+    margin-left: auto;
+}
+
+.head{
+    color: var(--Dark-grayish-cyan);
+    margin-top: 2rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem
+}
+
+.head:first-child{
+    margin-top: 0;
+}
+
+.field{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: var(--Very-light-grayish-cyan);
+    padding: 0.25rem 0;
+    border-radius: 0.5rem;
+    border: 2px solid transparent;
+}
+
+input:hover{
+    cursor: pointer;
+}
+
+.success:focus-within{
+    border: 2px solid var(--Strong-cyan);
+}
+
+.error{
+    border: 2px solid red !important;
+}
+
+.field img{
+    margin-left: 1rem;
+}
+
+.input{
+    color: var(--Very-dark-cyan);
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-left: auto;
+    margin-right: 1rem;
+    text-align: right;
+}
+
+.input::placeholder{
+    color: var(--Grayish-cyan);
+}
+
+
+.tip-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(110px,1fr));
+    gap: 1rem;
+    margin: 1rem 0 3rem;
+}
+
+.tip{
+    color: var(--White);
+    background-color: var(--Very-dark-cyan);
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    border: 2px solid transparent;
+}
+
+.custom{
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    border: 2px solid transparent;
+}
+
+.tip:hover{
+    background-color: var(--hover);
+    color: var(--Very-dark-cyan);
+    cursor: pointer;
+}
+
+#custom{
+    background-color: var(--Very-light-grayish-cyan);
+}
+
+
+
+#custom-field{
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: var(--Very-dark-cyan);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#custom-field::placeholder{
+    color: var(--Dark-grayish-cyan);
+}
+
+
+.second{
+    background-color: var(--Very-dark-cyan);
+    flex-grow: 1;
+    margin: 1.5rem 1.5rem 1.5rem 0;
+    padding: 3rem 2.5rem 2rem;
+    border-radius: 1rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.calculated{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.calculated .left{
+    display: flex;
+    flex-direction: column;
+}
+
+.calculated .left span:first-child{
+    color: white;
+    font-size: 1rem;
+}
+
+.calculated .left span:nth-child(2){
+    color: var(--Grayish-cyan);
+    font-size: 0.85rem;
+}
+
+.calculated .right{
+    color: var(--Strong-cyan);
+    margin-left: auto;
+    font-size: 3.25rem;;
+}
+
+.reset{
+    border: none;
+    margin-top: auto;
+    text-align: center;
+    background-color: var(--Strong-cyan);
+    font-size: 1.5rem;
+    color: var(--Very-dark-cyan);
+    padding: 0.25rem 0;
+    border-radius: 0.5rem;
+}
+
+.reset:hover{
+    background-color: var(--hover);
+    cursor: pointer;
+}
+
+@media (width <= 600px){
+    body{
+        padding: 3rem 0 0;
+    }
+    .card{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.5rem
+    }
+    .first{
+        width: 100%;
+        margin: 0 0 3rem;
+    }
+    .second{
+        width: 100%;
+        margin: 0;
+    }
+    .splitter{
+        margin-bottom: 2rem;
+    }
+    .calculated .right{
+        font-size: 2rem;
+    }
+}
